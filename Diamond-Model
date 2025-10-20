@@ -1,7 +1,6 @@
 # DIAMOND MODEL - TryHackMe SOC1
 
 # CORE ELEMENTS
-
 The Diamond Model of Intrusion Analysis - adversary, infrastructure, capability, and victim [the atomic element of any intrusion activity]
   -Used to identify the elements of an intrusion and analyze APT’s (Advanced Persistent Threats)
 * Adversary - attacker, enemy, cyber threat actor, or hacker.
@@ -18,26 +17,26 @@ The Diamond Model of Intrusion Analysis - adversary, infrastructure, capability,
 Infrastructure - software/hardware - physical/logical interconnections that the adversary uses to deliver a capability or maintain control of capabilities
   -Type 1: Infrastructure controlled by the adversary
   -Type 2: Infrastructure controlled by an intermediary; obfuscates the sources and attribution of the activity (malware staging servers, malicious domain names, compromised email accounts)
-  -Service Providers - Internet Service, Domain Registars, and Webmail providers
+  -Service Providers - Internet Service, Domain Registrars, and Webmail providers
 
 # META-FEATURES
-
 Diamond Model Meta-Features:
   -Timestamp - date/time of events (malicious activity)
   -Phase - (Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command & Control, Actions on Objective)
-  -Result - success/failure/unknown - post-conditions of advesary’s operations
+  -Result - success/failure/unknown - post-conditions of adversary’s operations
   -Direction - direction of the intrusion attack of host-based and network-based events
-  -Methodology - general classification of intrusion (phising, DDos, breach, portscan)
+  -Methodology - general classification of intrusion (phishing, DDos, breach, portscan)
   -Resources - one or more external resources used for intrusion (software, knowledge, information, hardware, funds, facilities, access)
-  -Technology - an adversary compromises legitimate websites they believe their target victim will vist (watering-hole attack)
+  -Technology - an adversary compromises legitimate websites they believe their target victim will visit (watering-hole attack)
 
-Social-Political Component: need/intent of the advesary (financial gain, acceptance in to the hacker community, hactivism, espionage)
-  -Zombie in a botnet = compromised device thats controlled by an attacker to carry out malicious tasks
+# BEHIND THE BREACH
+Social-Political Component: need/intent of the adversary (financial gain, acceptance into the hacker community, hacktivism, espionage)
+  -Zombie in a botnet = compromised device that's controlled by an attacker to carry out malicious tasks
   -Cryptomining- solving cryptographic equations through computers to create new cryptocurrencies 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 PRACTICE ANALYSIS: Construction of The Diamond Model - SUCCESSFUL COMPLETION
-—--------------------------------—-------
+—--------------------------------—------------------------------------------
 
 # NEW TERMS LEARNED:
    - Zombie
