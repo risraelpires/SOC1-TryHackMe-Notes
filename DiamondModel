@@ -1,39 +1,43 @@
 # DIAMOND MODEL - TryHackMe SOC1
 
-The Diamond Model of Intrusion Analysis- adversary, infrastructure, capability, and victim [the atomic element of any intrusion activity].
-Used to identify the elements of an intrusion and analyze APT’s (Advanced Persistent Threats).
-Adversary- attacker, enemy, cyber threat actor, or hacker.
-Operator- conducts intrusion activity.
-Customer- benefits from the activity conducted in the intrusion.
-Victim- target of the adversary [organization, person, target email address, IP address, domain, etc] to gain a foothold on the organization.
-Personae- people/organizations being targeted.
-Assets- attack surface, including the set of systems, networks, email addresses, hosts, IP addresses].
-Capability- skills, tools, and techniques used by an adversary in the event.
-TTPs- Tactics, Techniques, and Procedures 	
-Capacity- all of the vulnerabilities/exposures an individual capability can use
-Adversary Arsenal- set of capabilities belonging to an adversary.
+# CORE ELEMENTS
 
-Infrastructure- software/hardware - physical/logical interconnections; physical or logical interconnections that the adversary uses to deliver a capability or maintain control of capabilities.
-Type 1: Infrastructure controlled by the adversary
-Type 2: Infrastructure controlled by an intermediary; obfuscates the sources and attribution of the activity (malware staging servers, malicious domain names, compromised email accounts. 
-Service Providers- Internet Service, Domain Registars, and Webmail providers.
+The Diamond Model of Intrusion Analysis - adversary, infrastructure, capability, and victim [the atomic element of any intrusion activity]
+  -Used to identify the elements of an intrusion and analyze APT’s (Advanced Persistent Threats)
+* Adversary - attacker, enemy, cyber threat actor, or hacker.
+  -Operator - conducts intrusion activity
+  -Customer - benefits from the activity conducted in the intrusion
+* Victim - target of the adversary [organization, person, target email address, IP address, domain, etc] to gain a foothold on the organization
+  -Personae - people/organizations being targeted
+  -Assets - attack surface, including the set of systems, networks, email addresses, hosts, IP addresses]
+* Capability - skills, tools, and techniques used by an adversary in the event
+  -TTPs - Tactics, Techniques, and Procedures 	
+* Capacity - all of the vulnerabilities/exposures an individual capability can use
+* Adversary Arsenal - set of capabilities belonging to an adversary
+
+Infrastructure - software/hardware - physical/logical interconnections that the adversary uses to deliver a capability or maintain control of capabilities
+  -Type 1: Infrastructure controlled by the adversary
+  -Type 2: Infrastructure controlled by an intermediary; obfuscates the sources and attribution of the activity (malware staging servers, malicious domain names, compromised email accounts)
+  -Service Providers - Internet Service, Domain Registars, and Webmail providers
+
+# META-FEATURES
 
 Diamond Model Meta-Features:
-Timestamp- date/time of events (malicious activity).
-Phase- (Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command & Control, Actions on Objective)
-Result- success/failure/unknown - post-conditions of advesary’s operations
-Direction- direction of the intrusion attack of host-based and network-based events
-Methodology- general classification of intrusion (phising, DDos, breach, portscan)
-Resources- one or more external resources used for intrusion (software, knowledge, information, hardware, funds, facilities, access).
+  -Timestamp - date/time of events (malicious activity)
+  -Phase - (Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command & Control, Actions on Objective)
+  -Result - success/failure/unknown - post-conditions of advesary’s operations
+  -Direction - direction of the intrusion attack of host-based and network-based events
+  -Methodology - general classification of intrusion (phising, DDos, breach, portscan)
+  -Resources - one or more external resources used for intrusion (software, knowledge, information, hardware, funds, facilities, access)
+  -Technology - an adversary compromises legitimate websites they believe their target victim will vist (watering-hole attack)
 
 Social-Political Component: need/intent of the advesary (financial gain, acceptance in to the hacker community, hactivism, espionage)
-Zombie in a botnet = compromised device thats controlled by an attacker to carry out malicious tasks. 
-Crypto mining- solving cryptographic equations through computers to create new cryptocurrencies) 
+  -Zombie in a botnet = compromised device thats controlled by an attacker to carry out malicious tasks
+  -Cryptomining- solving cryptographic equations through computers to create new cryptocurrencies 
 
-Technology- (meta-feature) an adversary compromises legitimate websites they believe their target victim will vist (watering-hole attack). 
 
-Practice Analysis: Successful Completion
+PRACTICE ANALYSIS: Construction of The Diamond Model - SUCCESSFUL COMPLETION
 —--------------------------------—-------
 
-New Terms Learned:
-Zombie
+# NEW TERMS LEARNED:
+   - Zombie
