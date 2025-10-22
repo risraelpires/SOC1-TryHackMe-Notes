@@ -1,23 +1,61 @@
-#MITRE - TryHackMe SOC1
+# MITRE FRAMEWORK - TryHackMe SOC1 
 
-#CORE ELEMENTS
+# CORE ELEMENTS
 MITRE ATT&CK - globally-accesible knowledge base of adversary tactics and techniques based on real-world observations 
  * EST 2013 - security professionals were selected to emulate adversarial TTP's against a network - data collected to construct ATT&CK framework
--often associated with CVE's (Common Vulnerabilities and Exposures) list [public catalog for finding an exploit for a given vulnerability]
+- Often associated with CVE's (Common Vulnerabilities and Exposures) list [public catalog for finding an exploit for a given vulnerability]
 
-Sole focus on Windows platform -> macOS -> Linux
+APT - Advanced Persistent Threat
+ * Threat Group - team/group
+ * Nation-State Group 
+   = engage in long-term attacks against organizations and/or countries 
 
+TTP - Tactics, Techniques, and Procedures
+ * Tactic - adversary's objectice
+ * Technique - how the adversary achieves the objective
+ * Procedure - how the technique is executed
+
+# MITRE RESOURCES
     * ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) Framework
     * CAR (Cyber Analytics Repository) Knowledge Base
     * ENGAGE
     * D3FEND (Detection, Denial, and Disruption Framework Empowering Network Defense) 
 
-APT - Advanced Persistent Threat
- * Threat Group - team/group
- * Nation-State Group 
-= engage in long-term attacks against organizations and/or countries 
+# NAVIGATING THROUGH ATT&CK FRAMEWORK
+Hikit - malware (used by Axiom) for late-stage persistence and exfiltration after initial compromise
+Mitigation for Phishing = User Training
+Detection Data Sources = Application, File, Network Traffic
 
-TTP - Tactics, Techniques, and Procedures
- * Tactic - adversary's objectice
- * Technique - how the adversary achieves the objective
- * Procedure - how the technique is executed 
+# CAR KNOWLEDGE BASE (CAR)
+CAR - Cyber Analytics Repository - knowledge base of analytics developed by MITRE based on ATT&CK adversary model
+ * Validated & explained analytics - data models leveraged in pseudocode and implementations targeted at specific tools 
+   - Pseudocode - plain, human-readable way to descrive a set of instructions (program) that a program or system will perform
+   - Masquerading - technique for running executables with the same hash and different names
+
+# MITRE ENGAGE
+MITRE Engage - framework for planning and discussing adversary engagement operations - engage your adversaries - implements Cyber Denial & Cyber Deception
+ * Cyber Denial - prevent the adversary's ability to conduct their operations
+ * Cyber Deception - plant artifacts to mislead the adversary
+[MITRE Engage provides a 'starter kit' that consists of a collection of whitepapers and PDFs]
+
+ * Threat Model - a risk assessment that models organizational strengths and weaknesses
+
+# MITRE D3FEND
+MITE D3FEND - knowledge graph of cybersecurity countermeasures - BETA - NSA
+ * Provides definitions, explanations of how they work, considerations, examples, and digital artifact relationships
+- Adversary Emulation Library - public library making adversary emulation plans for blue/red teamers 
+
+# ATT&CK EMULATION PLANS
+Center of Threat-Informed Defense (CTID) - organization formed by MITRE - various companies & vendors around the globe conducting research on cyber threats and their TTPs
+
+# THREAT INTELLIGENCE
+Cyber Threat Intelligence (CTI) or Threat Intelligence (TI) - information or TTPs attributed to the adversary - for the sole purpose of making better decisions for defensive strategy 
+- Gathering TI can serve as a checklist to ensure proper security coverage, and to know which APT groups may target a specific sector 
+
+# RECAP
+Explored the various tools and resources MITRE offers - more information as defenders = better equipped for defense 
+
+# NEW TERMS LEARNED:
+   - Masquerading 
+   - Cyber Denial
+   - Cyber Deception
