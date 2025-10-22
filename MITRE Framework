@@ -51,6 +51,7 @@ Center of Threat-Informed Defense (CTID) - organization formed by MITRE - variou
 # THREAT INTELLIGENCE
 Cyber Threat Intelligence (CTI) or Threat Intelligence (TI) - information or TTPs attributed to the adversary - for the sole purpose of making better decisions for defensive strategy 
 - Gathering TI can serve as a checklist to ensure proper security coverage, and to know which APT groups may target a specific sector 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # RECAP
 Explored the various tools and resources MITRE offers - more information as defenders = better equipped for defense 
