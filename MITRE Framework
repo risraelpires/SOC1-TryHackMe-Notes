@@ -1,0 +1,23 @@
+#MITRE - TryHackMe SOC1
+
+#CORE ELEMENTS
+MITRE ATT&CK - globally-accesible knowledge base of adversary tactics and techniques based on real-world observations 
+ * EST 2013 - security professionals were selected to emulate adversarial TTP's against a network - data collected to construct ATT&CK framework
+-often associated with CVE's (Common Vulnerabilities and Exposures) list [public catalog for finding an exploit for a given vulnerability]
+
+Sole focus on Windows platform -> macOS -> Linux
+
+    * ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) Framework
+    * CAR (Cyber Analytics Repository) Knowledge Base
+    * ENGAGE
+    * D3FEND (Detection, Denial, and Disruption Framework Empowering Network Defense) 
+
+APT - Advanced Persistent Threat
+ * Threat Group - team/group
+ * Nation-State Group 
+= engage in long-term attacks against organizations and/or countries 
+
+TTP - Tactics, Techniques, and Procedures
+ * Tactic - adversary's objectice
+ * Technique - how the adversary achieves the objective
+ * Procedure - how the technique is executed 
