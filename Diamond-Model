@@ -3,7 +3,7 @@
 # CORE ELEMENTS
 The Diamond Model of Intrusion Analysis - adversary, infrastructure, capability, and victim [the atomic element of any intrusion activity]
   -Used to identify the elements of an intrusion and analyze APT’s (Advanced Persistent Threats)
-* Adversary - attacker, enemy, cyber threat actor, or hacker.
+* Adversary - attacker, enemy, cyber threat actor, or hacker
   -Operator - conducts intrusion activity
   -Customer - benefits from the activity conducted in the intrusion
 * Victim - target of the adversary [organization, person, target email address, IP address, domain, etc] to gain a foothold on the organization
