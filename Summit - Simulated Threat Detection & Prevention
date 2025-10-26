@@ -75,7 +75,7 @@ ATT&CK ID: Defense Evasion (TA0005)
 [This simulated challenge only required one rule. But I would create 3 separate rules, one for each registry modification]
 
 # SAMPLE5.EXE
-'Sample5.exe' provided connection logs 
+'sample5.exe' provided connection logs 
 Identified patterns:
 Port: 443
 Size: 97 bytes
@@ -91,7 +91,7 @@ Frequency: 1800s
 ATT&CK ID: Command and Control (TA0011)
 
 # SAMPLE6.EXE
-'Sample6.exe' provided command logs:
+'sample6.exe' provided command logs:
 
 'dir c:\ >> %temp%\exfiltr8.log
 dir "c:\Documents and Settings" >> %temp%\exfiltr8.log
