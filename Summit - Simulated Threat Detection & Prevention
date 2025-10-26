@@ -1,0 +1,128 @@
+# SUMMIT - TryHackMe SOC1  
+
+# CORE ELEMENTS
+Mock Threat simulation and detection engineering engagement to bolster malware detection capabilities
+Summit Room Objective: increase the simulated adversaries' cost of operations and chase them away by configuring security tools for
+detection and prevention
+
+# SAMPLE1.EXE 
+Scanned 'sample1.exe' in the Malware Sandbox tool to review the generated report
+  -'sample1.exe' tagged and detected with Metasploit and connects to an unusual port
+
+ -> Added the 'sample1.exe' MD5 hash to the hash blocklist - to distinguish the file and to add a detection rule to block it
+    = Blocking the hash blocked the malware from executing
+
+- File hashes and digests are unique to each file - highest confidence indicators
+  * Hash function - an algorithm that takes an input and produces a fixed-size output, known as the hash value or message digest
+    - Hash function - process
+    - Message Digest - result of the applied process 
+
+# SAMPLE2.EXE
+Scanned 'sample2.exe' file - to discover that the file was tagged and detected with Metasploit, connects to an unusual address, and connects
+to an unusual port
+The network activity showcases that the 'sample2.exe' file has 1 HTTP request, and 3 TCP/UDP connections
+(2) connections to Microsoft Corporation
+(1) connection to Intrabuzz Hosting Limited
+
+-> Created a Firewall Rule
+ * Type: Egress
+ * Source IP: Any
+ * Destination IP: 154.35.10.113 (Intrabuzz Hosting Limited)
+ * Action: Deny
+
+# SAMPLE3.EXE
+Scanned 'sample3.exe' file - to discover the file was tagged and detected with Metasploit, downloads executable files from the internet,
+connects to unusual IP addresses, and connects to unusual ports 
+The network activity showcases that 'sample3.exe' has 2 HTTP requests, 4 TCP/UDP connections, and 2 DNS requests
+(3) connections to Xplorita Cloud Services
+(1) connection to Microsoft Corporation
+
+DNS Requests:
+(1) services.microsoft.com
+(1) emudyn.bresonicz.info 
+
+-> Created (2) DNS Rules
+ * Rule Name: Microsoft Services
+ * Category: Malware
+ * Domain Name: services.microsoft.com
+ * Action: Deny
+
+* Rule Name: Bresonicz
+ * Category: Malware
+ * Domain Name: emudyn.bresonicz.info
+ * Action: Deny
+
+# SAMPLE4.EXE
+Scanned 'sample4.exe' file - to discover the file disables Windows Defender Real-Time monitoring, downloads executable files from the
+Internet, connects to unusual IP addresses, connects to unusual ports, and makes changes to the registry
+The network activity showcases that 'sample4.exe' has 2 HTTP requests, 3 TCP/UDP connections, and 1 DNS request
+(3) connections to Xplorita Cloud Services
+
+DNS Requests:
+(1) cranes0ft.iniware.xyz	
+
+Registry Activity:
+(1) Read event - notepad.exe 
+(2) Write event - sample4.exe & explorer.exe
+
+-> Created a rule using Sigma Rule Builder
+Sysmon Event Logs > Registry Modifications 
+Registry Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection
+Registry Name: DisableRealtimeMonitoring
+Value: 1
+ATT&CK ID: Defense Evasion (TA0005)
+
+[This simulated challenge only required one rule. But I would create 3 separate rules, one for each registry modification]
+
+# SAMPLE5.EXE
+'Sample5.exe' provided connection logs 
+Identified patterns:
+Port: 443
+Size: 97 bytes
+Timed connections on 2023-08-15
+[Potential communication with a command-and-control server]
+
+-> Created a rule using Sigma Rule Builder
+Sysmon Event Logs > Network Connections 
+Remote IP: Any
+Remote Port: Any
+Size: 97 bytes
+Frequency: 1800s
+ATT&CK ID: Command and Control (TA0011)
+
+# SAMPLE6.EXE
+'Sample6.exe' provided command logs:
+
+'dir c:\ >> %temp%\exfiltr8.log
+dir "c:\Documents and Settings" >> %temp%\exfiltr8.log
+dir "c:\Program Files" >> %temp%\exfiltr8.log
+dir d:\ >> %temp%\exfiltr8.log
+net localgroup administrator >> %temp%\exfiltr8.log
+ver >> %temp%\exfiltr8.log
+systeminfo >> %temp%\exfiltr8.log
+ipconfig /all >> %temp%\exfiltr8.log
+netstat -ano >> %temp%\exfiltr8.log
+net start >> %temp%\exfiltr8.log'
+
+[The executable goes through various contents within the C: and D: drives, lists the users in the Administrator group, and shows the Windows version.
+It then lists the system information, displays all network configurations, shows active network connections and listening ports, and enumerates
+all running services. All of this information is saved in a log file for the adversary's analysis and use.]
+
+-> Created a rule using Sigma Rule Builder
+Sysmon Event Logs > File Creation and Modification
+File Path: %temp%
+File Name: exfilr8.log
+ATT&CK ID: Exfiltration (TA0010)
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+# LIMITATIONS TO HASH DETECTION RULES
+Relying simply on hashes for detection has its limits, as they're susceptible to change
+  - Altering a single bit of the file changes the hash value - in return, the detection rule will fail
+      *Adversaries can recompile the malware, generate a new file hash, and execute it without issue
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# NEW TERMS LEARNED: 
+  * Message Digest - (synonym) hash value
+  * Egress - outbound traffic - 'GET' requests
+  * Ingress - inbound
+  * Autonomous System (AS) - a collection of IP addresses and routers under the control of one entity (ISP, data center, large enterprise)
+  * Autonomous System Number (ASN) - the number that identifies the autonomous system
