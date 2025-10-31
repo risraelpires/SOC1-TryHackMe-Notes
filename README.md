@@ -19,6 +19,7 @@ Each concept or lab is documented using structured blocks:
 - **# NEW TERMS LEARNED** -Documented vocabulary and synonyms
 
 # Tools Used
+- SIEM
 - Sigma Rule Builder
 - Sysmon
 - Wireshark, Nmap, Metasploit
