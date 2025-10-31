@@ -5,6 +5,12 @@ Mock Threat simulation and detection engineering engagement to bolster malware d
 Summit Room Objective: increase the simulated adversaries' cost of operations and chase them away by configuring security tools for
 detection and prevention
 
+# TOOLS USED
+-Malware Sandbox
+-Sigma Rule Builder
+-Sysmon Event Logs
+-Firewall & DNS Rule Engines
+
 # SAMPLE1.EXE 
 Scanned 'sample1.exe' in the Malware Sandbox tool to review the generated report
   -'sample1.exe' tagged and detected with Metasploit and connects to an unusual port
