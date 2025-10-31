@@ -1,0 +1,85 @@
+# CYBER THREAT INTEL  - TryHackMe SOC1  
+
+# CORE ELEMENTS
+The SOC Level 1 Analyst's position in the Security Operations Centre: the first human touchpoint for suspicious pings, pop-ups, or packets
+* Cyber Threat Intelligence (CTI) - the process of collecting, analyzing, and applying data about cyber threats to proactively defend against threats
+* Telemetry - the automated collection, analysis, and reporting of data from various sources like endpoints, networks, and applications. Providing real-time visibility into security posture
+  = enriching indicators, triaging alerts, and turning raw data into stories
+* Triaging - sorting, prioritizing, and investigating security alerts to identify real threats and effective incident response
+  --> Alert Response: Ticket Queues
+
+Threat Intelligence provides the context for analyst to help discern which alerts represent genuine danger
+ (3) Essential Questions that CTI seeks to answer:
+  * Who, or what, is on the other end of this alert indicator?
+  * What was their behaviour in the past?
+  * How does my organization respond, and what should I do about it right now?
+
+CTI is the front-line tool that elevates SOC triage from guesswork to calculated action
+
+# ESSENTIAL VOCABULARY| EXAMPLES |SOCL1 RESPONSE
+  - Data - an unprocessed observable | '45.155.205.3 :443' | Capture the artefact
+  - Information - data plus factual annotation | 'IP registered to Hetzner, first seen 2023-07-14' | Record attributes
+  - Intelligence - analyzed information that answers | 'IP belongs to the current BumbleBee C2; block immediately' | Escalate or suppress
+
+# DATA TO INTELLIGENCE
+  --> Making artifacts usable to qualify them as intelligence or prove they never will.
+* Enrichment - rapid, methodical lookups of public, commercial, and internal sources that provide evidence of origin, behavior, and relevance
+* Indicator of Compromise (IOC) - evidence of a breach | C2 address in logs
+* Indicator of Attack (IOA) - a malicious action | PowerShell launching an unknown service
+* Tactics, Techniques, and Procedures (TTP) - adversary's detailed methodologies (MITRE ATT&CK)
+
+* TIP - maintain a bookmarked browser folder or SIEM launcher panel that opens preferred look-ups with highlighted indicators pre-populated *
+
+# FEEDS V PLATFORMS
+  - Feed: a scheduled stream of indicators, usually delivered in various formats (CSV,JSON,STIX,TAXII)
+  - Platform: a structured repository that stores indicators, tracks enrichment, maps relationships, and enforces sharing permissions (MISP, OPENCTI)
+ 
+# SOURCES OF CTI
+  - Internal telemetry - SIEM logs, EDR detections, phishing-mailbox submissions
+  - Commercial services: Vendor premium feeds, paid sandboxes**,** and closed-source analytics 
+  - Open-source intelligence (OSINT): AbuseIPDB, URLhaus, public blogs with IOCs, and academic research
+  - Communities & ISACs: Sector-specific lists marked with labels and rich context (e.g., FS-ISAC)
+
+# CTI LIFECYCLE
+  1) Planning & Direction - primary asset, business risk, available controls, initial CTI goal
+  2) Collection - assembling the raw material
+  3) Processing - normalizing and correlating the data
+  4) Analysis - turning information into judgement
+  5) Dissemination - getting intelligence to the right consumers
+  6) Feedback - measuring and refining the cycle
+
+# CTI STANDARDS & FRAMEWORKS
+  - MITRE ATT&CK - how adversaries attack
+  - MITRE D3F3ND - how defenders respond
+  - Cyber Kill Chain - adversary actions in steps
+  - CVEs, CVSS, and the NVD - discovered vulnerabilities, severity rating, relationship between them 
+  - STIX - structured JSON schema for threat information
+  - TAXII - secure APIs to exchange threat intelligence in near real-time for detection, prevention and for threat mitigation
+
+# PRACTICAL ANALYSIS
+ --> Used a SIEM dashboard for identifying and organizing threat intel:
+    * (Source) Threat Actor email address: vipivillain@badbank.com
+    * (Downloaded) File Name: flbpfuh.exe
+    * Threat Actor Extraction IP Address: 91.185.23.222
+    * Victim Email Recipient: John Doe
+    * User Victim Logged Account: Administrator
+    * Malware Tool: flbpfuh.exe
+  
+# TOOLS USED BY JUNIOR ANALYSTS
+  - WHOIS
+  - PowerShell
+  - VirusTotal
+  - Shodan
+  - URLhaus
+  - MXToolBox
+  - Sigma Rules
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+# RECAP
+These notes serve as a general outline of the various resources and tools used in the SOC environment. Consisting of general descriptions, definitions, standards & frameworks,
+and other forms of reference for the general duties of a SOC1 Analyst. This allows me to have an organized repository of tools to know and learn for my future career in Cybersecurity.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# NEW TERMS LEARNED: 
+  - Telemetry
+  - Enrichment
